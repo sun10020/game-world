@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { ArrowLeft, Gamepad2 } from "lucide-react";
+export default function NotFound(){return <main id="main" className="page-content text-page"><Gamepad2 size={48}/><h1>A little off the board.</h1><p>That game or page is not in our collection. Your next adventure is still waiting.</p><Link className="primary-button" href="/"><ArrowLeft size={17}/>Back to all games</Link></main>;}

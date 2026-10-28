@@ -1,0 +1,1 @@
+export function AdSlot({placement}:{placement:"catalog-bottom"|"game-bottom"}){if(process.env.NEXT_PUBLIC_AD_PLACEHOLDERS!=="true")return null;return <aside aria-label="Advertisement" className="ad-slot" data-ad-placement={placement}><span>Advertisement</span></aside>;}

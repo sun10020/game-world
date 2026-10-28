@@ -1,0 +1,3 @@
+import type { MetadataRoute } from "next";
+import { games, siteUrl } from "@/lib/games";
+export default function sitemap():MetadataRoute.Sitemap{return [{url:siteUrl,changeFrequency:"weekly",priority:1},...games.map(game=>({url:`${siteUrl}/games/${game.slug}`,changeFrequency:"monthly" as const,priority:.8})),...["about","privacy","terms"].map(page=>({url:`${siteUrl}/${page}`,changeFrequency:"yearly" as const,priority:.3}))];}

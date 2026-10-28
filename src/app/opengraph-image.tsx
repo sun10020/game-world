@@ -1,0 +1,6 @@
+import { ImageResponse } from "next/og";
+import { games } from "@/lib/games";
+export const alt="Game World: A little play. A better day.";
+export const size={width:1200,height:630};
+export const contentType="image/png";
+export default function Image(){return new ImageResponse(<div style={{width:"100%",height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",padding:"80px",background:"#edf2df",color:"#315c46",fontFamily:"sans-serif"}}><div style={{fontSize:32,display:"flex",marginBottom:35}}>gameworld.</div><div style={{fontSize:85,fontWeight:700,display:"flex"}}>A little play.</div><div style={{fontSize:85,fontWeight:700,display:"flex"}}>A better day.</div><div style={{display:"flex",marginTop:35,fontSize:24,color:"#697c5d"}}>{games.length} free games. No downloads. Just play.</div><div style={{display:"flex",position:"absolute",right:80,bottom:110,gap:12}}>{["#a9c778","#e8ad89","#9aadd7"].map((color,index)=><div key={color} style={{width:90,height:90,background:color,borderRadius:12,display:"flex",alignItems:"center",justifyContent:"center",fontSize:35,transform:`rotate(${index%2?10:-10}deg)`}}>{["X","O","8"][index]}</div>)}</div></div>,size);}
